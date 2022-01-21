@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sweet Treats</title>
+    <script
+      type="text/javascript"
+      src="https://identity.netlify.com/v1/netlify-identity-widget.js"
+    ></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Princess+Sofia&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="icon" href="img/favicon.png" />
+  </head>
+  <body id="top">
+    <section class="main-container">
+      <!-- MAIN HEADER START -->
+      <header class="main-header">
+        <img src="img/iceCream.png" />
+        <h1 class="brand">Sweet Treats</h1>
+        <nav>
+          <ul class="navigation">
+            <li id="sign-up">Sign up</li>
+            <li id="log-in">Log in</li>
+          </ul>
+        </nav>
+
+        <!-- SIGN UP FORM START  -->
+        <section class="form-container animate hidden">
+          <button class="form-close-btn" type="button">X</button>
+          <div class="form-brand">
+            <h1 class="brand">Sweet Treats</h1>
+          </div>
+          <p>Don't miss out! <strong>Register NOW!</strong></p>
+          <div id="register-message" class="register-message"></div>
+          <form
+            id="register"
+            class="form-input-container"
+            name="st-register"
+            netlify-honeypot="bot-field"
+            data-netlify-recaptcha="true"
+            data-netlify="true"
+            method="POST"
+          >
+            <input
+              class="hidden"
+              type="text"
+              name="bot-field"
+              placeholder="Don't fill this out if you're human:"
+            />
+
+            <label for="name">Name:</label>
+            <input type="text" name="name" maxlength="256" required />
+            <!-- <label for="lastName">Last Name:</label>
+            <input type="text" name="lastName" maxlength="256" required /> -->
+            <label for="email">Email:</label>
+            <input type="email" name="email" maxlength="256" required />
+            <label for="password">Password:</label>
+            <input type="password" name="password" maxlength="256" required />
+            <!-- <div data-netlify-recaptcha="true"></div> -->
+            <button type="submit">Register</button>
+          </form>
+        </section>
+
+        <!-- SIGN UP FORM END -->
+
+        <!-- LOG IN FORM START  -->
+        <section class="form-container animate hidden">
+          <button class="form-close-btn" type="button">X</button>
+          <div class="form-brand">
+            <h1 class="brand">Sweet Treats</h1>
+          </div>
+          <p>Welcome back! <strong>Log in NOW!</strong></p>
+          <div id="login-message" class="login-message"></div>
+
+          <form
+            id="login"
+            class="form-input-container"
+            name="st-login"
+            netlify-honeypot="bot-field"
+            data-netlify-recaptcha="true"
+            data-netlify="true"
+            method="POST"
+          >
+            <input
+              class="hidden"
+              type="text"
+              name="bot-field"
+              placeholder="Don't fill this out if you're human:"
+            />
+
+            <!-- <label for="username">Username:</label>
+            <input type="text" name="username" maxlength="256" required /> -->
+            <label for="email">Email:</label>
+            <input type="email" name="email" maxlength="256" required />
+            <label for="password">Password:</label>
+            <input
+              id="password"
+              type="password"
+              name="password"
+              maxlength="256"
+              required
+            />
+            <!-- <div data-netlify-recaptcha="true"></div> -->
+            <button type="submit">Log in</button>
+          </form>
+        </section>
+
+        <!-- LOG IN FORM END -->
+      </header>
+      <!-- MAIN HEADER END -->
+      <div v-if="isLoggedIn">
+        <!-- CALL TO ACTION SECTION START -->
+        <section>
+          <header class="call-action-container">
+            <img
+              src="img/icecreamlayout.jpg"
+              alt="artisan ice cream selection"
+            />
+            <div class="call-action-text">
+              <h2>
+                Amazingly Yummy and Delicious Artisan
+                <span class="brand">Sweet Treats!</span>
+              </h2>
+              <p>I SCREAM for ice cream!</p>
+              <p>
+                Only the Freshest, Organic, Non-GMO, Gluten-free, no
+                preservitives added ingredients... without losing the
+                <span class="brand">Sweet Treats</span>, mouth watering delight!
+              </p>
+
+              <p class="notify-text">
+                <span class="increase-font">LOG IN NOW!</span>
+                to select your favorite mouth watering delights, see real-time
+                inventory, and be notified when your favorite
+                <span class="brand">Sweet Treats</span> are available.
+              </p>
+            </div>
+          </header>
+        </section>
+
+        <!-- CALL TO ACTION SECTION END -->
+      </div>
+      <!-- MAIN SECTION START -->
+      <section class="card-section-container">
+        <header>
+          <h2>The <span class="brand">Sweet Treats</span> best sellers!</h2>
+          <h3>You deserve to treat yourself!</h3>
+        </header>
+        <div class="card-container">
+          <div class="card">
+            <img src="img/nutDream.jpg" alt="pistachio nut ice cream" />
+            <p class="card-img-text">The Pistachio Dream!</p>
+          </div>
+          <div class="card">
+            <img src="img/sweetPlate.jpg" alt="plate of ice cream and fruit" />
+            <p class="card-img-text">Super Sweet Plate!</p>
+          </div>
+          <div class="card">
+            <img src="img/sweetBowl.jpg" alt="bowl of ice cream" />
+            <p class="card-img-text">The Sweetness Bowl!</p>
+          </div>
+          <div class="card">
+            <img
+              src="img/delicateWaffle.jpg"
+              alt="waffle bowl with ice cream"
+            />
+            <p class="card-img-text">Da' Delicate Waffle!</p>
+          </div>
+
+          <div class="card">
+            <img src="img/apple-dream.jpg" alt="waffle bowl with ice cream" />
+            <p class="card-img-text">Thee Apple Crisp!</p>
+          </div>
+
+          <div class="card">
+            <img src="img/brownie-music.jpg" alt="waffle bowl with ice cream" />
+            <p class="card-img-text">Sound of Brownie!</p>
+          </div>
+
+          <div class="card">
+            <img src="img/orange-dream.jpg" alt="waffle bowl with ice cream" />
+            <p class="card-img-text">The Orange Dream!</p>
+          </div>
+
+          <div class="card">
+            <img src="img/rich-brownie.jpg" alt="waffle bowl with ice cream" />
+            <p class="card-img-text">Molten Brownie!</p>
+          </div>
+
+          <div class="card">
+            <img
+              src="img/the-cone-countess.jpg"
+              alt="waffle bowl with ice cream"
+            />
+            <p class="card-img-text">The Cone Countess!</p>
+          </div>
+        </div>
+      </section>
+      <!-- MAIN SESCTION END -->
+
+      <!-- FOOTER SECTION START -->
+      <footer>
+        <div class="footer-container">
+          <h1 class="brand">Sweeet Treats</h1>
+          <a class="up-arrow" href="/">
+            <img src="img/upArrow.svg" aria-hidden="true" />
+          </a>
+        </div>
+      </footer>
+
+      <!-- FOOTER SECTION END -->
+    </section>
+    <script src="script/main.js"></script>
+  </body>
+</html>
