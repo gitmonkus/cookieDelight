@@ -114,6 +114,7 @@ button:hover {
 .main-header img {
   transform: rotate(-15deg);
   position: absolute;
+  z-index: 1;
   top: 32%;
   left: 28px;
 }
@@ -230,10 +231,12 @@ input:focus {
   justify-content: space-between;
   gap: 1%;
   padding: 3em;
+  position: relative;
 }
 
 .call-action-container img {
   max-width: 47%;
+  opacity: 0.5;
 }
 
 .call-action-text {
@@ -325,11 +328,13 @@ input:focus {
   z-index: 10;
 }
 
+/* CALL TO ACTION */
+
 /* MAIN */
 
 .select-text {
-  border-top: 2px solid var(--dark-background);
-  border-bottom: 2px solid var(--dark-background);
+  border-top: 2px solid var(--font-color);
+  border-bottom: 2px solid var(--font-color);
   background: var(--light-background);
   padding: 0.5em 0;
   margin-bottom: 43px;
@@ -360,32 +365,6 @@ input:focus {
   position: relative;
 }
 
-.out-of-stock-heading,
-.in-stock-heading {
-  color: var(--light-font-color);
-  text-shadow: 1px 1px 1px var(--font-color);
-  text-align: center;
-  font-size: 1.5rem;
-  padding: 0.5em;
-  font-family: "Roboto", sans-serif;
-  position: absolute;
-  top: 8%;
-}
-
-.in-stock-heading {
-  background: var(--dark-background);
-  right: 3%;
-}
-
-.out-of-stock-heading {
-  background: var(--dark-dark-background);
-  right: 16.5%;
-}
-
-.out-of-stock {
-  background: var(--dark-dark-background);
-}
-
 input[type="checkbox"] {
   appearance: none;
   margin: 0;
@@ -406,39 +385,44 @@ input.check-treat:hover {
 }
 
 input[type="checkbox"]:checked {
-  border: 8px dashed var(--dark-background);
+  border: 8px dashed var(--font-color);
   transform: none;
 }
 
 /*  SWEET TREAT CARD IMAGES */
 
-.pistachio {
-  background: url(../img/nutDream.jpg) no-repeat;
+.choco-chip-sandwich {
+  background: url(../img/choco-chip-sandwich.jpg) no-repeat;
   background-size: cover;
 }
 
-.super-sweet-plate {
-  background: url(../img/sweetPlate.jpg) no-repeat;
+.chosen-chestnut {
+  background: url(../img/chosen-chestnut.jpg) no-repeat;
   background-size: cover;
 }
 
-.sweetness-bowl {
-  background: url(../img/sweetBowl.jpg) no-repeat;
+.walnut-star {
+  background: url(../img/walnut-star.jpg) no-repeat;
   background-size: cover;
 }
 
-.delicate-waffle {
-  background: url(../img/delicateWaffle.jpg) no-repeat;
+.coffee-dipper {
+  background: url(../img/coffee-dipper.jpg) no-repeat;
   background-size: cover;
 }
 
-.apple-crisp {
-  background: url(../img/apple-dream.jpg) no-repeat;
+.cookie-favorite {
+  background: url(../img/cookie-favorite.jpg) no-repeat;
   background-size: cover;
 }
 
-.sound-of-brownie {
-  background: url(../img/brownie-music.jpg) no-repeat;
+.lemon-heart {
+  background: url(../img/lemon-heart.jpg) no-repeat;
+  background-size: cover;
+}
+
+.marvelous-macaron {
+  background: url(../img/marvelous-macaron.jpg) no-repeat;
   background-size: cover;
 }
 
@@ -447,13 +431,8 @@ input[type="checkbox"]:checked {
   background-size: cover;
 }
 
-.molten-brownie {
-  background: url(../img/rich-brownie.jpg) no-repeat;
-  background-size: cover;
-}
-
-.cone-countess {
-  background: url(../img/the-cone-countess.jpg) no-repeat;
+.original-chocolate-dream {
+  background: url(../img/original-chocolate-dream.jpg) no-repeat;
   background-size: cover;
 }
 
@@ -532,20 +511,5 @@ input[type="checkbox"]:checked {
     text-align: center;
     padding-left: 1em;
     margin-bottom: 2em;
-  }
-
-  .out-of-stock-heading,
-  .in-stock-heading {
-    top: 2.5em;
-  }
-
-  .in-stock-heading {
-    background: var(--dark-background);
-    right: 4%;
-  }
-
-  .out-of-stock-heading {
-    background: var(--dark-dark-background);
-    right: 44%;
   }
 }
