@@ -2,11 +2,11 @@
 // User not logged in?
 /////////////////////////////////////////////////////////////////////////////////////
 
-document.addEventListener("DOMContentLoaded", function () {
-  if (!localStorage.getItem("token") && !localStorage.getItem("name")) {
-    window.location.href = "https://sweettreathero.netlify.app";
-  }
-});
+// document.addEventListener("DOMContentLoaded", function () {
+//   if (!localStorage.getItem("token") && !localStorage.getItem("name")) {
+//     window.location.href = "https://sweettreathero.netlify.app";
+//   }
+// });
 
 /////////////////////////////////////////////////////////////////////////////////////
 // Display name from local storage

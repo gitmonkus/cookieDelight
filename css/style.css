@@ -1,11 +1,11 @@
 :root {
   --light-font-color: #fff;
-  --font-color: #d6333b;
-  --mid-background: rgba(214, 51, 59, 0.2);
-  --dark-background: rgba(214, 51, 59, 0.7);
   --light-background: rgba(255, 255, 255, 0.7);
   --dark-dark: #000;
   --dark-dark-background: rgba(0, 0, 0, 0.7);
+  --font-color: #986a4f;
+  --mid-background: rgb(245, 185, 125, 0.7);
+  --dark-background: #f5b97d;
 }
 
 /* GENERAL */
@@ -108,15 +108,14 @@ button:hover {
 
 .main-header h1 {
   font-size: 3rem;
-  margin-left: 3em;
+  margin-left: 4em;
 }
 
 .main-header img {
-  width: 120px;
   transform: rotate(-15deg);
   position: absolute;
-  top: 0;
-  left: 1em;
+  top: 32%;
+  left: 28px;
 }
 
 /* NAV */
