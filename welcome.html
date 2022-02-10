@@ -22,8 +22,9 @@
     <section class="main-container">
       <!-- MAIN HEADER START -->
       <header class="main-header">
-        <img src="img/cookie-logo.png" alt="cookie logo" />
-        <h1 class="brand">Cookie Delights</h1>
+        <h1 class="brand">
+          Cookie Delights <img src="img/cookie-logo.png" alt="cookie logo" />
+        </h1>
         <div id="welcome-name" class="welcome-message"></div>
 
         <!-- LOG OUT START -->
@@ -40,7 +41,11 @@
       <!-- CALL TO ACTION SECTION START -->
       <section>
         <div class="call-action-container">
-          <img src="img/cookie-table.jpg" alt="cookies on table" />
+          <img
+            class="call-action-img"
+            src="img/cookie-table.jpg"
+            alt="cookies on table"
+          />
           <div class="call-action-text">
             <h2>
               Check out our DELICIOUS
@@ -65,64 +70,115 @@
           <h3>You deserve to treat yourself!</h3>
           <div class="select-container">
             <h3 class="brand select-text">Select your favorite!</h3>
+            <div class="available-container">
+              <p class="available">Available</p>
+              <p class="unavailable">Unavailable</p>
+            </div>
           </div>
         </div>
 
         <div class="card-container">
-          <div class="card-welcome">
-            <input type="checkbox" class="choco-chip-sandwich check-treat" />
-            <p class="card-img-text">Choco-Chip Sandwich!</p>
-          </div>
-
-          <div class="card-welcome">
-            <input type="checkbox" class="chosen-chestnut check-treat" />
-
-            <p class="card-img-text">Chosen Chestnut!</p>
-          </div>
-
-          <div class="card-welcome">
-            <input type="checkbox" class="walnut-star check-treat" />
-
-            <p class="card-img-text">Walnut Star!</p>
-          </div>
-          <div class="card-welcome">
-            <input type="checkbox" class="coffee-dipper check-treat" />
-
-            <p class="card-img-text">Da' Coffee Dipper!</p>
-          </div>
-
-          <div class="card-welcome">
-            <input type="checkbox" class="cookie-favorite check-treat" />
-
-            <p class="card-img-text">Festive Faves!</p>
-          </div>
-
-          <div class="card-welcome">
-            <input type="checkbox" class="lemon-heart check-treat" />
-
-            <img alt="waffle bowl with ice cream" />
-            <p class="card-img-text">Lemon Heart!</p>
-          </div>
-
-          <div class="card-welcome">
-            <input type="checkbox" class="marvelous-macaron check-treat" />
-
-            <p class="card-img-text">Marvelous Macaron!</p>
-          </div>
-
-          <div class="card-welcome">
-            <input type="checkbox" class="orange-dream check-treat" />
-
-            <p class="card-img-text">Orange Dream!</p>
-          </div>
-
-          <div class="card-welcome">
+          <div class="card">
+            <label for="choco-chip-sandwich">1</label>
             <input
               type="checkbox"
-              class="original-chocolate-dream check-treat"
+              id="choco-chip-sandwich"
+              class="choco-chip-sandwich check-treat treat"
             />
 
-            <p class="card-img-text">Original Chocolate Chip!</p>
+            <p class="card-img-text available unavailable">
+              Choco-Chip Sandwich!
+            </p>
+          </div>
+
+          <div class="card">
+            <label for="chosen-chestnut">2</label>
+            <input
+              type="checkbox"
+              id="chosen-chestnut"
+              class="chosen-chestnut check-treat treat"
+            />
+
+            <p class="card-img-text available">Chosen Chestnut!</p>
+          </div>
+
+          <div class="card">
+            <label for="walnut-star">3</label>
+            <input
+              type="checkbox"
+              id="walnut-star"
+              class="walnut-star check-treat treat"
+            />
+
+            <p class="card-img-text available">Walnut Star!</p>
+          </div>
+          <div class="card">
+            <label for="coffee-dipper">4</label>
+            <input
+              type="checkbox"
+              id="coffee-dipper"
+              class="coffee-dipper check-treat treat"
+            />
+
+            <p class="card-img-text available">Da' Coffee Dipper!</p>
+          </div>
+
+          <div class="card">
+            <label for="cookie-favorite">5</label>
+            <input
+              type="checkbox"
+              id="cookie-favorite"
+              class="cookie-favorite check-treat treat"
+            />
+
+            <p class="card-img-text available unavailable">Festive Faves!</p>
+          </div>
+
+          <div class="card">
+            <label for="lemon-heart">6</label>
+            <input
+              type="checkbox"
+              id="lemon-heart"
+              class="lemon-heart check-treat treat"
+            />
+
+            <img alt="waffle bowl with ice cream" />
+            <p class="card-img-text available">Lemon Heart!</p>
+          </div>
+
+          <div class="card">
+            <label for="marvelous-macaron">7</label>
+            <input
+              type="checkbox"
+              id="marvelous-macaron"
+              class="marvelous-macaron check-treat treat"
+            />
+
+            <p class="card-img-text available">Marvelous Macaron!</p>
+          </div>
+
+          <div class="card">
+            <label for="orange-dream">8</label>
+            <input
+              type="checkbox"
+              id="orange-dream"
+              class="orange-dream check-treat treat"
+            />
+
+            <p class="card-img-text available">Orange Dream!</p>
+          </div>
+
+          <div class="card">
+            <label for="original-chocolate-dream"
+              >original-chocolate-dream</label
+            >
+            <input
+              type="checkbox"
+              id="original-chocolate-dream"
+              class="original-chocolate-dream check-treat treat"
+            />
+
+            <p class="card-img-text available">Original Chocolate Chip!</p>
           </div>
         </div>
       </section>
@@ -132,14 +188,30 @@
       <footer>
         <div class="footer-container">
           <h1 class="brand">Cookie Delights</h1>
-          <a class="up-arrow" href="/"
-            ><img src="img/upArrow.svg" aria-hidden="true"
-          /></a>
+
+          <div class="social">
+            <a href="https://twitter.com"
+              ><img src="img/social/tweet.svg" alt="twitter link"
+            /></a>
+            <a href="https://facebook.com"
+              ><img src="img/social/fb.svg" alt="facebook link"
+            /></a>
+            <a href="https://instagram.com"
+              ><img src="img/social/instagram.svg" alt="instagram link"
+            /></a>
+          </div>
+
+          <!-- <a class="up-arrow" href="/"
+            ><img
+              src="img/upArrow.svg"
+              aria-hidden="true"
+              alt="link to top of page"
+          /></a> -->
         </div>
       </footer>
 
       <!-- FOOTER SECTION END -->
     </section>
-    <script src="script/welcome.js"></script>
+    <script src="js/welcome.js"></script>
   </body>
 </html>

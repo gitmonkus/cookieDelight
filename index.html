@@ -5,10 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Cookie Delights</title>
-    <script
-      type="text/javascript"
-      src="https://identity.netlify.com/v1/netlify-identity-widget.js"
-    ></script>
+
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -26,8 +23,10 @@
     <section class="main-container">
       <!-- MAIN HEADER START -->
       <header class="main-header">
-        <img src="img/cookie-logo.png" />
-        <h1 class="brand">Cookie Delights</h1>
+        <h1 class="brand">Cookie Delights
+          <img src="img/cookie-logo.png" alt="cookie logo"/>
+
+        </h1>
         <nav>
           <ul class="navigation">
             <li id="sign-up">Sign up</li>
@@ -35,13 +34,16 @@
           </ul>
         </nav>
 
+
         <!-- SIGN UP FORM START  -->
         <section class="form-container animate hidden">
           <button class="form-close-btn" type="button">X</button>
           <div class="form-brand">
+            <img src="img/cookie-logo.png" alt="cookie logo"/>
+
             <h1 class="brand">Cookie Delights</h1>
           </div>
-          <p>Don't miss out! <strong>Register NOW!</strong></p>
+          <p><strong>Sign up NOW!</strong></p>
           <div id="register-message" class="register-message"></div>
           <form
             id="register"
@@ -68,7 +70,7 @@
             <label for="password">Password:</label>
             <input type="password" name="password" maxlength="256" required />
             <!-- <div data-netlify-recaptcha="true"></div> -->
-            <button type="submit">Register</button>
+            <button type="submit">Sign up</button>
           </form>
         </section>
 
@@ -78,6 +80,8 @@
         <section class="form-container animate hidden">
           <button class="form-close-btn" type="button">X</button>
           <div class="form-brand">
+            <img src="img/cookie-logo.png" alt="cookie logo"/>
+
             <h1 class="brand">Cookie Delights</h1>
           </div>
           <p>Welcome back! <strong>Log in NOW!</strong></p>
@@ -118,6 +122,7 @@
 
         <!-- LOG IN FORM END -->
       </header>
+
       <!-- MAIN HEADER END -->
         <!-- CALL TO ACTION SECTION START -->
         <section>
@@ -213,14 +218,22 @@
       <footer>
         <div class="footer-container">
           <h1 class="brand">Cookie Delights</h1>
-          <a class="up-arrow" href="/">
-            <img src="img/upArrow.svg" aria-hidden="true" />
-          </a>
+          <div class="social">
+            <a href="https://twitter.com"><img src="img/social/tweet.svg" alt="twitter link"></a>
+            <a href="https://facebook.com"><img src="img/social/fb.svg" alt="facebook link"></a>
+            <a href="https://instagram.com"><img src="img/social/instagram.svg" alt="instagram link"></a>
+          
+          
+          </div>
+
+          <!-- <a class="up-arrow" href="/">
+            <img src="img/upArrow.svg" aria-hidden="true" alt="up arrow to top of page" />
+          </a> -->
         </div>
       </footer>
 
       <!-- FOOTER SECTION END -->
     </section>
-    <script src="script/main.js"></script>
+    <script src="js/main.js"></script>
   </body>
 </html>

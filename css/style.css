@@ -4,13 +4,21 @@
   --dark-dark: #000;
   --dark-dark-background: rgba(0, 0, 0, 0.7);
   --font-color: #986a4f;
-  --mid-background: rgb(245, 185, 125, 0.7);
+  --font-color: #5d6063;
+  --mid-background: rgb(245, 185, 125, 0.5);
+  --mid-light-background: rgb(245, 185, 125, 0.9);
   --dark-background: #f5b97d;
+  --green: #6ea372;
+  --red: #bf484f;
 }
 
 /* GENERAL */
 * {
   box-sizing: border-box;
+}
+
+.card label {
+  display: none;
 }
 
 html {
@@ -21,15 +29,16 @@ html {
 }
 
 body {
-  max-width: 1280px;
+  max-width: 1440px;
   margin: 0 auto;
-  background: var(--mid-background);
+  background: var(--light-background);
   background-size: cover;
   color: var(--font-color);
   font-family: "Roboto", sans-serif;
   height: 100vh;
   line-height: 1.6;
-  letter-spacing: 0.2rem;
+  letter-spacing: 1px;
+  font-weight: bold;
 }
 
 a,
@@ -52,11 +61,24 @@ li {
   list-style: none;
 }
 
+img {
+  border-radius: 5px;
+}
+
 .brand {
   font-family: "Princess Sofia", cursive;
   font-weight: bold;
   color: var(--font-color);
   text-shadow: none;
+  position: relative;
+}
+
+.brand img {
+  transform: rotate(-15deg);
+  position: absolute;
+  z-index: 1;
+  top: 30%;
+  left: -180px;
 }
 
 button {
@@ -64,8 +86,9 @@ button {
   transition: all 300ms ease;
   background: var(--light-font-color);
   color: var(--font-color);
-  border: 2px solid var(--dark-background);
+  border: 2px solid var(--font-color);
   font-size: 1.5rem;
+  border-radius: 5px;
 }
 
 button:hover {
@@ -85,7 +108,7 @@ button:hover {
 .call-action-container,
 .main-container {
   background: var(--light-background);
-  padding: 3em;
+  margin: 0 1rem;
 }
 
 .main-container {
@@ -111,14 +134,6 @@ button:hover {
   margin-left: 4em;
 }
 
-.main-header img {
-  transform: rotate(-15deg);
-  position: absolute;
-  z-index: 1;
-  top: 32%;
-  left: 28px;
-}
-
 /* NAV */
 
 .navigation {
@@ -138,8 +153,9 @@ button:hover {
   top: 8px;
   right: 24px;
   z-index: 2;
-  border: 2px solid var(--dark-background);
+  border: 2px solid var(--font-color);
   box-shadow: 0 4px 8px -4px var(--font-color);
+  border-radius: 5px;
 }
 
 .form-container p {
@@ -149,8 +165,9 @@ button:hover {
 .form-input-container {
   display: flex;
   flex-direction: column;
-  background: var(--mid-background);
+  background: var(--light-font-color);
   padding: 1em;
+  border-radius: 5px;
 }
 
 .form-brand {
@@ -167,8 +184,9 @@ button:hover {
 
 .form-brand img {
   width: 80px;
-  top: 14%;
-  position: relative;
+  top: 15%;
+  left: -6%;
+  position: absolute;
 }
 
 .form-close-btn {
@@ -197,16 +215,19 @@ button:hover {
 }
 
 input {
-  border: 2px solid transparent;
   padding: 1em;
   color: inherit;
   font-family: inherit;
   transition: all 300ms ease;
   margin-bottom: 1em;
+  font-size: 1rem;
+  font-weight: bold;
+  border: 2px solid var(--font-color);
+  border-radius: 5px;
 }
 
 input:hover {
-  border: 2px solid var(--dark-background);
+  border: 2px solid var(--font-color);
 }
 
 input:focus {
@@ -217,9 +238,12 @@ input:focus {
 .register-message {
   font-size: 0.8rem;
   text-align: center;
-  font-weight: bold;
-  border: 2px solid var(--dark-background);
+  padding: 0.5rem 0;
+  border: 2px solid var(--light-background);
   margin-bottom: 2em;
+  color: var(--light-font-color);
+  background: var(--font-color);
+  letter-spacing: 1px;
 }
 
 /* CALL TO ACTION */
@@ -229,8 +253,8 @@ input:focus {
   align-items: center;
   flex-wrap: wrap;
   justify-content: space-between;
-  gap: 1%;
-  padding: 3em;
+  /* gap: 1%; */
+  /* padding: 3em; */
   position: relative;
 }
 
@@ -247,32 +271,37 @@ input:focus {
 .notify-text {
   font-weight: bold;
   padding-top: 1em;
-  border-top: 2px solid var(--dark-background);
+  border-top: 2px solid var(--font-color);
 }
 
 /* MAIN */
 
 .card-section-container {
-  background: var(--mid-background);
-  color: var(--light-font-color);
-  text-shadow: 1px 1px 1px var(--font-color);
+  /* background: var(--mid-background); */
   text-align: center;
   font-size: 1.5rem;
+  font-weight: bold;
   padding-top: 0.5em;
+}
+
+.card-section-container h2,
+.card-section-container h3 {
+  color: var(--font-color);
+  text-shadow: none;
+  font-weight: 400;
 }
 
 .card-container {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-evenly;
+  justify-content: space-between;
 }
 
 .card {
   background: var(--light-background);
-  max-width: 31%;
-  width: 368px;
-  height: 368px;
-  margin-bottom: 1.8em;
+  width: 31%;
+  min-height: 368px;
+  margin: 0.5em;
   transition: all 300ms ease;
   overflow: hidden;
   position: relative;
@@ -281,20 +310,16 @@ input:focus {
 .card img {
   width: 100%;
   height: 100%;
-  transition: all 300ms ease;
-}
-
-.card img:hover {
-  transform: scale(1.1);
+  border-radius: 5px;
 }
 
 .card-img-text {
+  background: var(--light-background);
   position: absolute;
   bottom: 0;
   margin: 0;
   padding: 0.5em 0;
   width: 100%;
-  background: var(--dark-background);
   z-index: 1;
   font-weight: bold;
 }
@@ -310,6 +335,14 @@ input:focus {
 
 .up-arrow {
   width: 60px;
+}
+
+/* .social {
+  margin-right: 8em;
+} */
+
+.social img {
+  width: 2rem;
 }
 
 /* 
@@ -334,31 +367,31 @@ input:focus {
 
 .select-text {
   border-top: 2px solid var(--font-color);
-  border-bottom: 2px solid var(--font-color);
-  background: var(--light-background);
-  padding: 0.5em 0;
-  margin-bottom: 43px;
+  padding: 1em 0;
+  padding-bottom: 0;
+  font-weight: bold;
+  font-size: 2rem;
+  margin-bottom: 0;
 }
 
-.card-welcome {
-  background: var(--light-background);
-  /* max-width: 31%; */
-  width: 368px;
-  height: 368px;
-  margin-bottom: 1.8em;
-  transition: all 300ms ease;
-  overflow: hidden;
-  position: relative;
+.available-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.card-welcome img {
-  width: 100%;
-  /* height: 100%; */
-  transition: all 300ms ease;
+.available {
+  background: var(--green);
+  color: var(--light-font-color);
+  padding: 0.5em;
 }
 
-.card-welcome img:hover {
-  transform: scale(1.1);
+.unavailable {
+  background: var(--red);
+  color: var(--light-font-color);
+  padding: 0.5em;
+  transform: none;
+  cursor: default;
 }
 
 .select-container {
@@ -372,14 +405,15 @@ input[type="checkbox"] {
   width: 100%;
   height: 100%;
   outline: none;
+  transition: border 300ms ease;
 }
 
-input.check-treat {
+input.treat {
   border: none;
-  transition: all 300ms ease;
+  transition: transform 300ms ease;
 }
 
-input.check-treat:hover {
+input.treat:hover {
   transform: scale(1.1);
   cursor: pointer;
 }
@@ -442,12 +476,36 @@ input[type="checkbox"]:checked {
 ///////////////////////////////////////
 */
 
-@media (max-width: 863px) {
-  /* HEADER */
-
+@media (max-width: 1100px) {
   .main-header {
     flex-direction: column;
+    margin-bottom: 0;
   }
+
+  .main-header h1 {
+    font-size: 3rem;
+    margin-left: 0;
+  }
+
+  /* .main-header img {
+    transform: rotate(-15deg);
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    left: 25%;
+  } */
+
+  .card {
+    width: 45.5%;
+  }
+
+  .navigation {
+    padding: 0;
+  }
+}
+
+@media (max-width: 863px) {
+  /* HEADER */
 
   /* FORM */
 
@@ -459,10 +517,6 @@ input[type="checkbox"]:checked {
 
   /* CALL TO ACTION */
 
-  .call-action-container {
-    padding: 1em;
-  }
-
   .call-action-container img {
     max-width: 100%;
     width: 100%;
@@ -471,32 +525,43 @@ input[type="checkbox"]:checked {
   .call-action-text {
     max-width: 100%;
     width: 100%;
+    order: 1;
+    margin-bottom: 2em;
   }
 
-  /* MAIN */
-  .card {
-    max-width: 100%;
+  .call-action-img {
+    order: 2;
   }
+}
 
-  /* 
+/*
 ///////////////////////////////////////
 // Welcome.html
 ///////////////////////////////////////
 */
 
-  .select-text {
-    text-align: left;
-    padding-left: 3em;
+@media (max-width: 800px) {
+  .card {
+    width: 100%;
+  }
+}
+
+@media (max-width: 633px) {
+  .social {
+    margin-right: 0;
   }
 
-  .in-stock-heading {
-    background: var(--dark-background);
-    right: 3%;
+  .brand img {
+    max-width: 100px;
+    top: 40%;
+    left: -35%;
   }
-
-  .out-of-stock-heading {
-    background: var(--dark-dark-background);
-    right: 22%;
+}
+@media (max-width: 520px) {
+  .brand img {
+    max-width: 100px;
+    top: 90%;
+    left: -15%;
   }
 }
 
