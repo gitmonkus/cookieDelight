@@ -13,8 +13,8 @@ HTML, CSS, JavaScript
 - Product presentation
 - Sign up, Log in
 - Product selection
-- Stored product selection in local storage (-- future moved to database)
-- Product notification (-- future email export from database, notify user if isChecked and inStock)
+- Stored product selection in local storage (-- future -- move to database)
+- Product notification (-- future -- email export from database, notify user if isChecked and changed from inStock = false to inStock = true)
 
 ## Demo
 
