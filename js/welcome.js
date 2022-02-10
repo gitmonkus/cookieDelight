@@ -43,6 +43,10 @@ function inventoryMachine(num) {
     inventory[num].isChecked = false;
     console.log("unchecked");
   }
+  let inventoryString = JSON.stringify(inventory);
+  localStorage.setItem("inv", inventoryString);
+  let fish = JSON.parse(localStorage.getItem("inv"));
+  console.log(fish);
 }
 
 let inventory = [
