@@ -2,11 +2,35 @@
 // User not logged in?
 /////////////////////////////////////////////////////////////////////////////////////
 
+let fromLocalStorage = [];
+
 document.addEventListener("DOMContentLoaded", function () {
   if (!localStorage.getItem("token") && !localStorage.getItem("name")) {
     window.location.href = "/";
+  } else if (localStorage.key(2)) {
+    inventory = JSON.parse(localStorage.getItem("inv"));
+    console.log("Found the inv KEY!");
+    setItemChecked();
+  } else {
+    let inventoryString = JSON.stringify(inventory);
+    localStorage.setItem("inv", inventoryString);
   }
 });
+
+/////////////////////////////////////////////////////////////////////////////////////
+// Display name from local storage
+/////////////////////////////////////////////////////////////////////////////////////
+
+function setItemChecked() {
+  let invLocalStorage = JSON.parse(localStorage.getItem("inv"));
+
+  for (let i = 0; i < invLocalStorage.length; i++) {
+    if (invLocalStorage[i].isChecked === true) {
+      checkTreat[i].checked = true;
+      console.log("checked the box");
+    }
+  }
+}
 
 /////////////////////////////////////////////////////////////////////////////////////
 // Display name from local storage
@@ -19,7 +43,8 @@ welcomeNameEl.textContent = `Welcome, ${firstNameEl}!`;
 // Log out
 /////////////////////////////////////////////////////////////////////////////////////
 document.getElementById("log-out").addEventListener("click", function () {
-  localStorage.clear();
+  localStorage.removeItem("name");
+  localStorage.removeItem("token");
   window.location.href = "/";
 });
 
@@ -43,10 +68,9 @@ function inventoryMachine(num) {
     inventory[num].isChecked = false;
     console.log("unchecked");
   }
+
   let inventoryString = JSON.stringify(inventory);
   localStorage.setItem("inv", inventoryString);
-  let fish = JSON.parse(localStorage.getItem("inv"));
-  console.log(fish);
 }
 
 let inventory = [
