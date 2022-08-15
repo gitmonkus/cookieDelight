@@ -6,7 +6,7 @@ A website / webapp for a restaurant, cookie shop, or bakery that showcases off p
 
 ## Technologies
 
-HTML, CSS, JavaScript
+HTML, CSS, JavaScript, Node.js, PostgreSQL, Python(Django)
 
 ## Features
 
